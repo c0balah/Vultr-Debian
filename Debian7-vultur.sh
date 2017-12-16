@@ -419,6 +419,10 @@ mv /usr/local/bin/menu.x /usr/local/bin/menu
 chmod +x /usr/local/bin/menu
 cd
 
+rm -f /root/iplist.txt
+
+rm -f /root/Debian7-vultr.sh
+
 clear
 service cron restart
 service openvpn restart
