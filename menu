@@ -378,21 +378,30 @@ do
 		
 	"Restart All Port")
 	clear
+	echo -e "${red}Service Openvpn restart....${NC}"
+    sleep 1.5	
+	break
 	echo "Service Openvpn restart .................tunggu sebentar"
 	service openvpn restart
 	echo "Restart OpenVPN selesai Script By Rasta-Team.net"
 
-	
+	echo -e "${red}Service Dropbear restart..${NC}"
+    sleep 1.5	
+	break
 	echo "Service Dropbear restart .................tunggu sebentar"
 	service dropbear restart
 	echo "Restart Dropbear selesai Script By Rasta-Team.net"
 
-	
+	echo -e "${red}Service Squid restart....${NC}"
+    sleep 1.5	
+	break
 	echo "Service Squid restart .................tunggu sebentar"
 	service squid3 restart
 	echo "Restart Squid selesai Script By Rasta-Team.net"
 
-	
+	echo -e "${red}Service Webmin restart....${NC}"
+    sleep 1.5	
+	break
 	echo "Service Webmin restart .................tunggu sebentar"
 	/etc/init.d/webmin restart
 	echo "Restart Webmin selesai Script By Rasta-Team.net"
@@ -407,7 +416,7 @@ do
 	
 	"Bersihkan cache ram")
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
-	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d spring 
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d rose 
 	break
 	;;
 	
