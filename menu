@@ -39,7 +39,7 @@ echo -e "============-RASTA-TEAM™-================"
 echo -e "     Host: $myip"
 echo -e "     Username: $uname" 
 echo -e "     Password: $pass                     " 
-echo -e "     Port default dropbear: 143          " 
+echo -e "     Port default dropbear: 443          " 
 echo -e "     Port default openSSH : 22           " 
 echo -e "     Port default squid   : 3128         " 
 echo -e "     Port default openVPN : 55           " 
@@ -281,7 +281,7 @@ do
 	user-list
 	read -p "Enter username yg di perbarui: " uname
 	#masaaktif="30"
-        read -p "Aktif sampai tanggal Thn-Bln-Hr(YYYY-MM-DD): " expdate
+    read -p "Aktif sampai tanggal Thn-Bln-Hr(YYYY-MM-DD): " expdate
 	
 	echo "Connecting to rasta-team.net..."
 	sleep 0.4
@@ -324,7 +324,7 @@ do
 	;;
 	
     "Monitor User")
-     monssh2
+	monssh2
 	#userlogin
 	break
     ;;
@@ -379,30 +379,21 @@ do
 		
 	"Restart All Port")
 	clear
-	echo -e "${red}Service Openvpn restart....${NC}"
-    sleep 1.5	
-	break
 	echo "Service Openvpn restart .................tunggu sebentar"
 	service openvpn restart
 	echo "Restart OpenVPN selesai Script By Rasta-Team.net"
 
-	echo -e "${red}Service Dropbear restart..${NC}"
-    sleep 1.5	
-	break
+	
 	echo "Service Dropbear restart .................tunggu sebentar"
 	service dropbear restart
 	echo "Restart Dropbear selesai Script By Rasta-Team.net"
 
-	echo -e "${red}Service Squid restart....${NC}"
-    sleep 1.5	
-	break
+	
 	echo "Service Squid restart .................tunggu sebentar"
 	service squid3 restart
 	echo "Restart Squid selesai Script By Rasta-Team.net"
 
-	echo -e "${red}Service Webmin restart....${NC}"
-    sleep 1.5	
-	break
+	
 	echo "Service Webmin restart .................tunggu sebentar"
 	/etc/init.d/webmin restart
 	echo "Restart Webmin selesai Script By Rasta-Team.net"
@@ -417,7 +408,7 @@ do
 	
 	"Bersihkan cache ram")
 	echo 3 > /proc/sys/vm/drop_caches && swapoff -a && swapon -a
-	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d rose 
+	echo "SUKSES..!!!Cache ram anda sudah di bersihkan." | boxes -d spring 
 	break
 	;;
 	
